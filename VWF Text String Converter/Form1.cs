@@ -16,6 +16,7 @@ namespace VWF_Text_String_Converter
     public partial class Form1 : Form
     {
         public string FName;
+        public Bitmap FontImage;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +35,8 @@ namespace VWF_Text_String_Converter
                 return;
             }
             FName = Path.GetFullPath(ofd.FileName);
-            VWF_Font.OpenFont(ofd.FileName);
+            FontImage = new Bitmap(ofd.FileName);
+            imgFontMap.Image = FontImage;
         }
     }
 }

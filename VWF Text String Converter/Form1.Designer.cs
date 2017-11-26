@@ -30,7 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imgFontMap = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFontMap)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -50,17 +52,27 @@
             this.fileToolStripMenuItem.Text = "File";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
+            // imgFontMap
+            // 
+            this.imgFontMap.Location = new System.Drawing.Point(12, 27);
+            this.imgFontMap.Name = "imgFontMap";
+            this.imgFontMap.Size = new System.Drawing.Size(366, 204);
+            this.imgFontMap.TabIndex = 1;
+            this.imgFontMap.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 391);
+            this.Controls.Add(this.imgFontMap);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFontMap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.PictureBox imgFontMap;
     }
 }
 

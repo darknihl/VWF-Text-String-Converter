@@ -15,7 +15,7 @@ namespace VWF_Text_String_Converter
 {
     public class VWF_Font
     {
-        Bitmap FontImage = null;
+        Bitmap FontImage;
 
         public void OpenFont(string Name)
         {
