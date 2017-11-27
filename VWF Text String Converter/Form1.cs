@@ -17,26 +17,34 @@ namespace VWF_Text_String_Converter
     {
         public string FName;
         public Bitmap FontImage;
+        public Dictionary<string,int> fontMap = new Dictionary<string, int>();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Load font image";
-            ofd.CheckFileExists = true;
-            ofd.CheckPathExists = true;
-            ofd.Multiselect = false;
-            if (ofd.ShowDialog() != DialogResult.OK)
-            {
-                MessageBox.Show("Could not open " + ofd.FileName);
-                return;
-            }
-            FName = Path.GetFullPath(ofd.FileName);
-            FontImage = new Bitmap(ofd.FileName);
+            FName = "melissa 8x8.png";
+            FontImage = new Bitmap(FName);
             imgFontMap.Image = FontImage;
+            fontMap.Add("a",8);
         }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+        /*private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FName = "/melissa 8x8.png";
+            FontImage = new Bitmap(FName);
+            imgFontMap.Image = FontImage;
+        }*/
+
+
     }
 }

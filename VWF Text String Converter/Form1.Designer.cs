@@ -29,50 +29,60 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imgFontMap = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.imgText = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgFontMap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgText)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(757, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // imgFontMap
             // 
             this.imgFontMap.Location = new System.Drawing.Point(12, 27);
             this.imgFontMap.Name = "imgFontMap";
-            this.imgFontMap.Size = new System.Drawing.Size(366, 204);
+            this.imgFontMap.Size = new System.Drawing.Size(128, 64);
             this.imgFontMap.TabIndex = 1;
             this.imgFontMap.TabStop = false;
+            // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(185, 273);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(256, 20);
+            this.txtInput.TabIndex = 2;
+            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
+            // 
+            // imgText
+            // 
+            this.imgText.Location = new System.Drawing.Point(185, 27);
+            this.imgText.Name = "imgText";
+            this.imgText.Size = new System.Drawing.Size(256, 240);
+            this.imgText.TabIndex = 3;
+            this.imgText.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 391);
+            this.ClientSize = new System.Drawing.Size(467, 312);
+            this.Controls.Add(this.imgText);
+            this.Controls.Add(this.txtInput);
             this.Controls.Add(this.imgFontMap);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgFontMap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgText)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,8 +91,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.PictureBox imgFontMap;
+        private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.PictureBox imgText;
     }
 }
 
