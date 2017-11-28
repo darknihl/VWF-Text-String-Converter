@@ -17,7 +17,20 @@ namespace VWF_Text_String_Converter
     {
         public string FName;
         public Bitmap FontImage;
-        public Dictionary<string,int> fontMap = new Dictionary<string, int>();
+        public Bitmap textString;
+        public Bitmap srcLetter;
+        public Bitmap destLetter;
+        public string textInput;
+        public char[] textArray;
+        public int textLetter;
+        public int x = 0;
+        public int y = 0;
+        public int w = 8;
+        public int h = 8;
+        //public Rectangle rectSrc = new Rectangle();
+        //public Rectangle rectDest = new Rectangle();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -25,25 +38,54 @@ namespace VWF_Text_String_Converter
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FName = "melissa 8x8.png";
+            FName = "melissa 8x8 mod.bmp";
             FontImage = new Bitmap(FName);
             imgFontMap.Image = FontImage;
-            fontMap.Add("a",8);
-        }
-
-        private void txtInput_TextChanged(object sender, EventArgs e)
-        {
             
         }
 
-
-
-        /*private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            FName = "/melissa 8x8.png";
-            FontImage = new Bitmap(FName);
-            imgFontMap.Image = FontImage;
-        }*/
+            if (e.KeyCode == Keys.Enter)
+            {
+                textArray = txtInput.Text.ToCharArray();
+                foreach (char c in textArray)
+                {
+                    int unicode = c;
+                    textLetter = (unicode - 0x20);
+                    
+                    
+
+                }
+
+            }
+        }
+
+        public void CloneText(PaintEventArgs e)
+        {
+            srcLetter = FontImage.Clone(new Rectangle(x + textLetter * 8, y, 8, 8), FontImage.PixelFormat);
+            destLetter = srcLetter;
+            e.Graphics.DrawImageUnscaled(destLetter, 0, 0);
+        }
+
+        public static void CopyRegionIntoImage(Bitmap srcBitmap, Rectangle srcRegion, ref Bitmap destBitmap, Rectangle destRegion)
+        {
+            using (Graphics grD = Graphics.FromImage(destBitmap))
+            {
+                grD.DrawImage(srcBitmap, destRegion, srcRegion, GraphicsUnit.Pixel);
+            }
+        }
+
+        //private void drawletter(painteventargs e)
+        //{
+        //    image newimage = image.fromfile(fname);
+        //    int x = 0;
+        //    int y = 0;
+
+        //    rectangle srcrect = new rectangle(0, 0, 8, 8);
+        //    graphicsunit units = graphicsunit.pixel;
+        //    e.graphics.drawimage(newimage, x, y, srcrect, units);
+        //}
 
 
     }

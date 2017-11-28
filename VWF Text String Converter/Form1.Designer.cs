@@ -58,7 +58,6 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(256, 20);
             this.txtInput.TabIndex = 2;
-            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // imgText
             // 
