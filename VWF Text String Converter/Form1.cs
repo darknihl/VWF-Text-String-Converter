@@ -41,7 +41,6 @@ namespace VWF_Text_String_Converter
         {
             fName = "melissa 8x8 mod.bmp";
             fontImage = new Bitmap(fName);
-            imgFontMap.Image = fontImage;
             
         }
 
