@@ -28,6 +28,7 @@ namespace VWF_Text_String_Converter
         public int tileHeight;
         public int sourceX;
         public int sourceY;
+        public string textCharData;
         //public Rectangle rectSrc = new Rectangle();
         //public Rectangle rectDest = new Rectangle();
 
@@ -41,6 +42,7 @@ namespace VWF_Text_String_Converter
         {
             fName = "melissa 8x8 mod.bmp";
             fontImage = new Bitmap(fName);
+            textCharData = "chardata.csv";
             
         }
 

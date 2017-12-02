@@ -30,8 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtInput = new System.Windows.Forms.TextBox();
-            this.imgText = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.imgText)).BeginInit();
+            this.pnlText = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -49,27 +48,25 @@
             this.txtInput.Size = new System.Drawing.Size(256, 20);
             this.txtInput.TabIndex = 2;
             // 
-            // imgText
+            // pnlText
             // 
-            this.imgText.Location = new System.Drawing.Point(12, 12);
-            this.imgText.Name = "imgText";
-            this.imgText.Size = new System.Drawing.Size(256, 240);
-            this.imgText.TabIndex = 3;
-            this.imgText.TabStop = false;
+            this.pnlText.Location = new System.Drawing.Point(12, 12);
+            this.pnlText.Name = "pnlText";
+            this.pnlText.Size = new System.Drawing.Size(256, 240);
+            this.pnlText.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 312);
-            this.Controls.Add(this.imgText);
+            this.ClientSize = new System.Drawing.Size(283, 289);
+            this.Controls.Add(this.pnlText);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.imgText)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,7 +76,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TextBox txtInput;
-        private System.Windows.Forms.PictureBox imgText;
+        private System.Windows.Forms.Panel pnlText;
     }
 }
 
